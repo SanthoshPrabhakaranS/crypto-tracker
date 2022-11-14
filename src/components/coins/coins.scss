@@ -1,0 +1,90 @@
+@import "../../styles/colors";
+
+.container {
+  color: #ffff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  max-width: 56rem;
+  height: 100%;
+
+  .coin-item {
+    display: flex;
+    width: 280px;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background-color: $bg-card;
+    border-radius: 0.9rem;
+
+    .top-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .name-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        & p:nth-child(1) {
+          font-size: 1.1rem;
+          font-weight: 600;
+        }
+        & p:nth-child(2) {
+          font-size: 0.7rem;
+          color: $card-font-primary;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .img-wrapper {
+      width: 80px;
+      height: 80px;
+      background-color: $img-wrapper-color;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+    }
+
+    .icon-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    //Card-Bottom
+    .bottom-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: rgb(224, 222, 222);
+
+      & div:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      & div:nth-child(2) {
+        display: flex;
+        align-items: flex-end;
+        & u,
+        & p {
+          color: $card-font-primary;
+          cursor: pointer;
+        }
+      }
+
+      & span {
+        color: $card-font-secondary;
+      }
+    }
+  }
+}
